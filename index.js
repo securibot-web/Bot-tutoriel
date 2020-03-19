@@ -17,6 +17,7 @@ bot.on('message', async (msg) => {
             msg.channel.send("pong! :joy:")
         }
         if(cmd == 'message'){
+            if(args.length < 1) return msg.channel.send("Pas assez d'arguments.")
             var message = ""
             for(let i = 0; i < args.length; i++){
                 message += args[i] + " "
