@@ -14,7 +14,7 @@ bot.on('message', async (msg) => {
         args = cmdArray.slice(1)
 
         msg.channel.send(cmd)
-        for(let i = 0; i < args.lenght; i++){
+        for(let i = 0; i < args.length; i++){
             msg.channel.send(args[i])
         }
     }
