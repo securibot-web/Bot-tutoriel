@@ -16,6 +16,13 @@ bot.on('message', async (msg) => {
         if(cmd == 'ping'){
             msg.channel.send("pong! :joy:")
         }
+        if(cmd == 'message'){
+            var message = ""
+            for(let i = 0; i < args.length; i++){
+                message += args[i] + " "
+            }
+            msg.channel.send("message: " + message)
+        }
     }
 });
 
