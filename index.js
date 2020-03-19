@@ -8,8 +8,12 @@ bot.on('ready', async () => {
 });
 
 bot.on('message', async (msg) => {
-    if(msg.content == 'bonjour'){
-        msg.channel.send('Salut!')
+    if(msg.content.startsWith(config.prefix)){
+        cmdArray = msg.content.split()
+        cmd = cmdArray[0]
+        args = cmdArray.slice(1)
+
+        msg.channel.send(cmd)
     }
 });
 
