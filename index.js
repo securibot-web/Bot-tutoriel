@@ -13,9 +13,8 @@ bot.on('message', async (msg) => {
         cmd = cmdArray[0]
         args = cmdArray.slice(1)
 
-        msg.channel.send(cmd)
-        for(let i = 0; i < args.length; i++){
-            msg.channel.send(args[i])
+        if(cmd == 'ping'){
+            msg.channel.send("pong! :joy:")
         }
     }
 });
