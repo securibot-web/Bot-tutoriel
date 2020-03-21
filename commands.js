@@ -11,7 +11,7 @@ const commandFactory = (command) => {
     };
 };
 
-const getCommand() = (name) => {
+const getCommand = (name) => {
     return commands.find((command) => command.name === name);
 };
 
