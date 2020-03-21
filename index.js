@@ -10,9 +10,9 @@ bot.on('ready', async () => {
 
 bot.on('message', async (msg) => {
     if(msg.content.startsWith(config.prefix) && !msg.author.bot){
-        cmdArray = msg.content.substring(1).split(" ")
-        cmd = cmdArray[0]
-        args = cmdArray.slice(1)
+        cmdArray = msg.content.substring(config.prefix.length).split(" ");
+        cmd = cmdArray[0];
+        args = cmdArray.slice(1);
 
         let command = commands.getCommand(cmd);
         if(command) command.run(bot, msg, args);
