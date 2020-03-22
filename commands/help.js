@@ -19,7 +19,15 @@ module.exports.run = async (bot, msg, args) => {
     for(let i = 0; i < result.length - 1; i++){
         hEmbed.addField(`Choix :regional_indicator_${letters[i]}:`, result[i + 1]);
     }
-    msg.channel.send(hEmbed);
+    msg.channel.send(hEmbed)
+        .then(function (message) {
+            for(let i = 0; i < result.length - 1; i++) {
+                message.react(`:regional_indicator_${letters[i]}:`)
+            }
+            message.pin();
+        }).catch(function (){
+
+        });
 }
 
 module.exports.help = {
