@@ -15,7 +15,7 @@ module.exports.run = async (bot, msg, args) => {
     let hEmbed = new Discord.RichEmbed();
     hEmbed.setColor('67b58e');
     hEmbed.setTitle(result[0]);
-    hEmbed.setDescription(`Un sondage proposé par ${msg.author.user.name}.`)
+    hEmbed.setDescription(`Un sondage proposé par ${msg.author}.`)
     for(let i = 0; i < result.length; i++){
         hEmbed.addField(`Choix :regional_indicator_${letters[i]}:`, result[i + 1]);
     }
