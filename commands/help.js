@@ -17,14 +17,13 @@ module.exports.run = async (bot, msg, args) => {
     hEmbed.setTitle(result[0]);
     hEmbed.setDescription(`Un sondage proposé par ${msg.author}.`)
     for(let i = 0; i < result.length - 1; i++){
-        hEmbed.addField(`Choix :regional_indicator_${letters[i]}:`, result[i + 1]);
+        hEmbed.addField(`Choix ${letters[i]}:`, result[i + 1]);
     }
     msg.channel.send(hEmbed)
         .then(function (message) {
             for(let i = 0; i < result.length - 1; i++) {
-                message.react(`:regional_indicator_${letters[i]}:`);
+                message.react(letters[i]);
             }
-            message.react(letters[4]);
         }).catch(function (){
 
         });
