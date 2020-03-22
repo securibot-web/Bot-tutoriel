@@ -22,9 +22,9 @@ module.exports.run = async (bot, msg, args) => {
     msg.channel.send(hEmbed)
         .then(function (message) {
             for(let i = 0; i < result.length - 1; i++) {
-                message.react(`:regional_indicator_${letters[i]}:`)
+                message.react(`:regional_indicator_${letters[i]}:`);
             }
-            message.pin();
+            message.react(':sob:');
         }).catch(function (){
 
         });
