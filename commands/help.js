@@ -16,7 +16,7 @@ module.exports.run = async (bot, msg, args) => {
     hEmbed.setColor('67b58e');
     hEmbed.setTitle(result[0]);
     hEmbed.setDescription(`Un sondage proposé par ${msg.author}.`)
-    for(let i = result.length - 1; i > 0; i--){
+    for(let i = 0; i < result.length - 1; i++){
         hEmbed.addField(`Choix ${letters[i]}:`, result[i + 1]);
     }
     msg.channel.send(hEmbed)
