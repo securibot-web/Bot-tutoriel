@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 
 module.exports.run = async (bot, msg, args) => {
-    const letters = ['0️⃣', '1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣', '6️⃣', '7️⃣', '8️⃣', '9️⃣', '🔟']
+    const letters = ['1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣', '6️⃣', '7️⃣', '8️⃣', '9️⃣', '🔟']
 
     const re = /"(.*?)"/g;
     const result = [];
@@ -16,7 +16,7 @@ module.exports.run = async (bot, msg, args) => {
     hEmbed.setColor('67b58e');
     hEmbed.setTitle(result[0]);
     hEmbed.setDescription(`Un sondage proposé par ${msg.author}.`)
-    for(let i = 0; i < result.length - 1; i++){
+    for(let i = result.length - 1; i > 0; i--){
         hEmbed.addField(`Choix ${letters[i]}:`, result[i + 1]);
     }
     msg.channel.send(hEmbed)
