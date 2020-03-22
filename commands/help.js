@@ -24,7 +24,7 @@ module.exports.run = async (bot, msg, args) => {
             for(let i = 0; i < result.length - 1; i++) {
                 message.react(`:regional_indicator_${letters[i]}:`);
             }
-            message.react(`4`);
+            message.react(letters[4]);
         }).catch(function (){
 
         });
