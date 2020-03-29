@@ -1,11 +1,12 @@
 const Discord = require('discord.js');
 
 module.exports.run = async (bot, msg, args) => {
-    let hEmbed = new Discord.MessageEmbed()
-    .setColor('1b65b5')
-    .setTitle('Bot Tutoriel')
-    .setDescription("L'aide de Bot Tutoriel")
-    msg.channel.send(hEmbed);
+    let embed = new Discord.MessageEmbed();
+    embed.setTitle('Suicide');
+    embed.setDescription('Oui oui');
+    embed.addField('Suicide?', 'oh oui!');
+
+    msg.channel.send(embed);
 }
 
 module.exports.help = {
