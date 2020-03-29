@@ -5,7 +5,9 @@ module.exports.run = async (bot, msg, args) => {
     .setColor('009999')
     .setTitle('Aide de Bot Tutoriel')
     .setDescription('Tout ce que vous avez besoin de savoir sur Bot Tutoriel')
-    .addField('Commandes:', '- message: Répéter un message choisi.')
+    .addField('Commandes:',
+    '- message: Répéter un message choisi.' +
+    '- say: Répondre "pong".')
     .addField('Préfixe:', 'Utilisez le préfixe ! avant chaque commande de Bot Tutoriel')
     .setFooter("J'espère que ça vous sera utile!");
     msg.channel.send(hEmbed);
