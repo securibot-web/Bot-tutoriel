@@ -5,9 +5,6 @@ module.exports.run = async (bot, msg, args) => {
     .setColor('1b65b5')
     .setTitle('Bot Tutoriel')
     .setDescription("L'aide de Bot Tutoriel")
-    .addField('Commandes:',
-    '- message: Répéter le message que vous avez entré.' +
-    '- ping: Répond "pong".');
     msg.channel.send(hEmbed);
 }
 
