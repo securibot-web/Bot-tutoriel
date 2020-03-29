@@ -6,7 +6,7 @@ module.exports.run = async (bot, msg, args) => {
     .setTitle('Aide de Bot Tutoriel')
     .setDescription('Tout ce que vous avez besoin de savoir sur Bot Tutoriel')
     .addField('Commandes:',
-    '- message: Répéter un message choisi.' +
+    '- message: Répéter un message choisi.\n' +
     '- say: Répondre "pong".')
     .addField('Préfixe:', 'Utilisez le préfixe ! avant chaque commande de Bot Tutoriel')
     .setFooter("J'espère que ça vous sera utile!");
