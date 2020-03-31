@@ -5,7 +5,10 @@ module.exports.run = async (bot, msg, args) => {
     if(!msg.guild.me.hasPermission('KICK_MEMBERS')) return msg.channel.send("Je n'ai pas le droit de kick des membres");
     if(args.length < 1) return msg.channel.send("Pas assez d'arguments");
     const member = msg.mentions.members.first();
-    const reason = args.shift().join(" ");
+    let reason = '';
+    for(let i = 1; i < args.length; i++){
+        reason += args[i] + ' ';
+    }
     if(!member) return msg.channel.send("Le membre est invalide");
     member.kick();
 
