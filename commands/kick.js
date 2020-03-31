@@ -20,7 +20,8 @@ module.exports.run = async (bot, msg, args) => {
         { name: 'Auteur:', value: msg.author },
         { name: 'Membre:', value: member },
         { name: 'Raison:', value: reason}
-    )
+    );
+    msg.channel.send(hEmbed);
 }
 
 module.exports.help = {
