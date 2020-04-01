@@ -10,6 +10,7 @@
     "start": "node index.js"
   },
   "dependencies": {
+    "canvas": "^2.6.1",
     "discord.js": "^12.1.1"
   }
 }
